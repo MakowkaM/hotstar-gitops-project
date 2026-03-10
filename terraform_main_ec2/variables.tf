@@ -2,7 +2,7 @@
 variable "region" {
   description = "AWS region"
   type        = string
-  default     = "us-east-1"
+  default     = "eu-central-1"
 }
 
 variable "vpc-name" {
@@ -58,13 +58,13 @@ variable "sg-name" {
 variable "iam-role" {
   description = "IAM Role for the Jumphost Server"
   type        = string
-  default     = "Jumphost-iam-role1"
+  default     = "Jumphost-iam-role"
 }
 
 variable "ami_id" {
   description = "AMI ID for the EC2 instance"
   type        = string
-  default     = "ami-0150ccaf51ab55a51" // Replace with the latest AMI ID for your region
+  default     = "ami-096a4fdbcf530d8e0" // Replace with the latest AMI ID for your region
 }
 
 variable "instance_type" {
