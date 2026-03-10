@@ -7,13 +7,13 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "hotstar-bucket-backend-1"
+    bucket = "hotstar-bucket-backend-111"
     key    = "ec2/terraform.tfstate"
-    region = "eu-central-1"
+    region = "us-east-1"
   }
 
   required_version = ">= 1.6.3"
 }
 provider "aws" {
-  region = "eu-central-1"
+  region = "us-east-1"
 }

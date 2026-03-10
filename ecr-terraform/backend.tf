@@ -7,9 +7,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "hotstar-bucket-backend-2"
+    bucket = "hotstar-bucket-backend-222"
     key    = "ecr/terraform.tfstate"
-    region = "eu-central-1"
+    region = "us-east-1"
   }
 
   required_version = ">= 1.6.3"

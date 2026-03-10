@@ -1,6 +1,6 @@
 
 provider "aws" {
-  region = "eu-central-1"  # Specify your desired region
+  region = "us-east-1"  # Specify your desired region
 }
 
  #Creating IAM role for EKS
@@ -167,7 +167,7 @@ data "aws_security_group" "selected" {
     subnet_ids      = [data.aws_subnet.subnet-1.id, data.aws_subnet.subnet-2.id]
     capacity_type   = "ON_DEMAND"
     disk_size       = 20
-    instance_types  = ["t3.small"]
+    instance_types  = ["t3.microl"]
 
    
 
@@ -181,8 +181,8 @@ data "aws_security_group" "selected" {
     }
 
     scaling_config {
-      desired_size = 2
-      max_size     = 10
+      desired_size = 1
+      max_size     = 2
       min_size     = 1
     }
 

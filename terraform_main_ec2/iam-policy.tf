@@ -1,5 +1,5 @@
-resource "aws_iam_policy" "eks_policy1" {
-  name        = "eks_policy1"
+resource "aws_iam_policy" "eks_policy" {
+  name        = "eks_policy"
   description = "Custom policy for EKS full access"
   policy      = <<EOF
 {
@@ -17,7 +17,7 @@ EOF
 
 resource "aws_iam_role_policy_attachment" "eks_policy_attachment" {
   role       = aws_iam_role.iam-role.name
-  policy_arn = aws_iam_policy.eks_policy1.arn
+  policy_arn = aws_iam_policy.eks_policy.arn
 }
 resource "aws_iam_role_policy_attachment" "iam-policy" {
   role = aws_iam_role.iam-role.name
