@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"  # Change as needed
+  region = "eu-central-1"  # Change as needed
 }
 
 resource "aws_ecr_repository" "hotstar" {

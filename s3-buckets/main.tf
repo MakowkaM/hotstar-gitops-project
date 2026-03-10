@@ -1,12 +1,12 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "eu-central-1"
 }
 
 resource "aws_s3_bucket" "bucket1" {
-  bucket = "hotstaarumullaas"
+  bucket = "hotstar-bucket-backend-1"
 
   tags = {
-    Name        = "hotstaarumullaas"
+    Name        = "hotstar-bucket-backend-1"
     Environment = "dev"
   }
 }
@@ -19,10 +19,10 @@ resource "aws_s3_bucket_versioning" "bucket1_versioning" {
 }
 
 resource "aws_s3_bucket" "bucket2" {
-  bucket = "hotstaalurus"
+  bucket = "hotstar-bucket-backend-2"
 
   tags = {
-    Name        = "hotstaalurus"
+    Name        = "hotstar-bucket-backend-2"
     Environment = "dev"
   }
 }
