@@ -31,7 +31,7 @@ pipeline {
                 script {
                     sh '''
                     #Retrieve an authentication token and authenticate your Docker client to your registry. Use the AWS CLI:
-                    aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 038462771803.dkr.ecr.eu-central-1.amazonaws.com
+                    aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 038462771803.dkr.ecr.us-east-1.amazonaws.com
 
                     #After the build completes, tag your image so you can push the image to this repository:
                     docker tag hotstar:latest 038462771803.dkr.ecr.us-east-1.amazonaws.com/hotstar:${BUILD_NUMBER}
@@ -48,7 +48,7 @@ pipeline {
                 GIT_EMAIL = "michalmakowka420@gmail.com"
                 GIT_USER_NAME = "MakowkaM"
                 IMAGE_NAME = "hotstar"
-                REPO_URL = "038462771803.dkr.ecr.eu-central-1.amazonaws.com/hotstar"
+                REPO_URL = "038462771803.dkr.ecr.us-east-1.amazonaws.com/hotstar"
                 YAML_FILE = "deployment.yml"
             }
             steps {
