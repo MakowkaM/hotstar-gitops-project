@@ -181,9 +181,9 @@ data "aws_security_group" "selected" {
     }
 
     scaling_config {
-      desired_size = 1
-      max_size     = 2
-      min_size     = 1
+      desired_size = 3
+      max_size     = 10
+      min_size     = 3
     }
 
     update_config {
